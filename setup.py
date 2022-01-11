@@ -7,5 +7,5 @@ setup(
    author='Dan Welsh',
    author_email='danielwelsh@gmail.com',
    packages=['census_geocoder'],  #same as name
-   install_requires=['json','requests'], #external packages as dependencies
+   install_requires=['requests'], #external packages as dependencies
 )
