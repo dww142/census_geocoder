@@ -25,11 +25,14 @@ BASE_URL = f'https://geocoding.geo.census.gov/geocoder/{SEARCH_TYPE}'
 
 FORMAT = 'json'
 
+
+### pulled from: https://tigerweb.geo.census.gov/ArcGIS/rest/services/TIGERweb/tigerWMS_Current/MapServer
 AVAILABLE_LAYERS = {
+    # 'all' : 'All Available Layers',
     '0' : 'Census Public Use Microdata Areas',
-    '1' : '2010 Census Public Use Microdata Areas Labels',
-    '2' : '2010 Census ZIP Code Tabulation Areas',
-    '3' : '2010 Census ZIP Code Tabulation Areas Labels',
+    '1' : 'Census Public Use Microdata Areas Labels (most recent)',
+    '2' : 'Census ZIP Code Tabulation Areas (most recent)',
+    '3' : 'Census ZIP Code Tabulation Areas Labels (most recent)',
     '4' : 'Tribal Census Tracts',
     '5' : 'Tribal Census Tracts Labels',
     '6' : 'Tribal Block Groups',
@@ -38,8 +41,8 @@ AVAILABLE_LAYERS = {
     '9' : 'Census Tracts Labels',
     '10' : 'Census Block Groups',
     '11' : 'Census Block Groups Labels',
-    '12' : '2010 Census Blocks',
-    '13' : '2010 Census Blocks Labels',
+    '12' : 'Census Blocks (most recent)',
+    '13' : 'Census Blocks Labels (most recent)',
     '14' : 'Unified School Districts',
     '15' : 'Unified School Districts Labels',
     '16' : 'Secondary School Districts',
@@ -80,20 +83,20 @@ AVAILABLE_LAYERS = {
     '51' : 'Tribal Designated Statistical Areas Labels',
     '52' : 'American Indian Joint-Use Areas',
     '53' : 'American Indian Joint-Use Areas Labels',
-    '54' : '115th Congressional Districts',
-    '55' : '115th Congressional Districts Labels',
-    '56' : '2016 State Legislative Districts - Upper',
-    '57' : '2016 State Legislative Districts - Upper Labels',
-    '58' : '2016 State Legislative Districts - Lower',
-    '59' : '2016 State Legislative Districts - Lower Labels',
+    '54' : 'Congressional Districts (most recent)', ### most recent 116
+    '55' : 'Congressional Districts Labels', ### most recent  116
+    '56' : 'State Legislative Districts - Upper (most recent)', ### most recent 2018
+    '57' : 'State Legislative Districts - Upper Labels (most recent)',
+    '58' : 'State Legislative Districts - Lower (most recent)',
+    '59' : 'State Legislative Districts - Lower Labels (most recent)',
     '60' : 'Census Divisions',
     '61' : 'Census Divisions Labels',
     '62' : 'Census Regions',
     '63' : 'Census Regions Labels',
-    '64' : '2010 Census Urbanized Areas',
-    '65' : '2010 Census Urbanized Areas Labels',
-    '66' : '2010 Census Urban Clusters',
-    '67' : '2010 Census Urban Clusters Labels',
+    '64' : 'Census Urbanized Areas (most recent)',
+    '65' : 'Census Urbanized Areas Labels (most recent)',
+    '66' : 'Census Urban Clusters (most recent)',
+    '67' : 'Census Urban Clusters Labels (most recent)',
     '68' : 'Combined New England City and Town Areas',
     '69' : 'Combined New England City and Town Areas Labels',
     '70' : 'New England City and Town Area Divisions',
@@ -115,4 +118,3 @@ AVAILABLE_LAYERS = {
     '86' : 'Counties',
     '87' : 'Counties Labels',
 }
-

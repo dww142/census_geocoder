@@ -13,6 +13,7 @@ import json
 import requests
 import settings
 
+ALL_AVAILABLE_LAYERS = settings.AVAILABLE_LAYERS.keys()
 
 class Geocoder:
     '''
@@ -22,7 +23,7 @@ class Geocoder:
         , state house upper (senate)
         , state house lower (House)
     '''
-    DEFAULT_LAYERS = ['14', '16', '18', '54', '56', '58']
+    DEFAULT_LAYERS = ['2','14','16','18','54','56','58','60','62','84','86']
     def __init__(self, street, city, state, zip_code=None, layers=DEFAULT_LAYERS):
         '''
         '''
@@ -92,6 +93,9 @@ class Geocoder:
                 self.geographies[layer] = geographies.get(layer)[0].get('NAME')
 
     def available_geography_layers(self):
+        '''
+        Print the lis tof available geography layers 
+        '''
         for layer in settings.AVAILABLE_LAYERS:
             print('Layer Name:', settings.AVAILABLE_LAYERS[layer], '; Layer Code:', layer)
         print('Default Layers (& Format):', self.DEFAULT_LAYERS)
